@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name digikey-kicad-library-master)(type KiCad)(uri /home/rraider/projects/musicalPlasmaLighter/digikey-kicad-library-master)(options "")(descr ""))
+)

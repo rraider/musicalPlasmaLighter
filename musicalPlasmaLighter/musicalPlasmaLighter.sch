@@ -1,4 +1,382 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATtiny:ATtiny85-20SU U1
+U 1 1 5D74299D
+P 2700 1750
+F 0 "U1" H 2171 1796 50  0000 R CNN
+F 1 "ATtiny85-20SU" H 2171 1705 50  0000 R CNN
+F 2 "Package_SO:SOIJ-8_5.3x5.3mm_P1.27mm" H 2700 1750 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 2700 1750 50  0001 C CNN
+	1    2700 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT00 U3
+U 1 1 5D7430DD
+P 4000 1750
+F 0 "U3" H 4000 2075 50  0000 C CNN
+F 1 "74HCT00" H 4000 1984 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 4000 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 4000 1750 50  0001 C CNN
+	1    4000 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT00 U3
+U 2 1 5D744372
+P 4000 2350
+F 0 "U3" H 4000 2675 50  0000 C CNN
+F 1 "74HCT00" H 4000 2584 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 4000 2350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 4000 2350 50  0001 C CNN
+	2    4000 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT00 U3
+U 3 1 5D745C50
+P 3950 2950
+F 0 "U3" H 3950 3275 50  0000 C CNN
+F 1 "74HCT00" H 3950 3184 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 3950 2950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 3950 2950 50  0001 C CNN
+	3    3950 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT00 U3
+U 4 1 5D74715B
+P 4950 1750
+F 0 "U3" H 4950 2075 50  0000 C CNN
+F 1 "74HCT00" H 4950 1984 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 4950 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 4950 1750 50  0001 C CNN
+	4    4950 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT00 U3
+U 5 1 5D749902
+P 1200 3600
+F 0 "U3" H 1430 3646 50  0000 L CNN
+F 1 "74HCT00" H 1430 3555 50  0000 L CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 1200 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 1200 3600 50  0001 C CNN
+	5    1200 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R 47k1
+U 1 1 5D750EC0
+P 6200 1900
+F 0 "47k1" H 6270 1946 50  0000 L CNN
+F 1 "R" H 6270 1855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6130 1900 50  0001 C CNN
+F 3 "~" H 6200 1900 50  0001 C CNN
+	1    6200 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R 47k2
+U 1 1 5D754E95
+P 6200 2400
+F 0 "47k2" H 6270 2446 50  0000 L CIN
+F 1 "R" H 6270 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6130 2400 50  0001 C CNN
+F 3 "~" H 6200 2400 50  0001 C CNN
+	1    6200 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D7974BD
+P 2700 2350
+F 0 "#PWR?" H 2700 2100 50  0001 C CNN
+F 1 "GND" H 2705 2177 50  0000 C CNN
+F 2 "" H 2700 2350 50  0001 C CNN
+F 3 "" H 2700 2350 50  0001 C CNN
+	1    2700 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D798C77
+P 1200 4100
+F 0 "#PWR?" H 1200 3850 50  0001 C CNN
+F 1 "GND" H 1205 3927 50  0000 C CNN
+F 2 "" H 1200 4100 50  0001 C CNN
+F 3 "" H 1200 4100 50  0001 C CNN
+	1    1200 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5D79DD70
+P 3950 3850
+F 0 "SW?" H 3950 4135 50  0000 C CNN
+F 1 "SW_Push" H 3950 4044 50  0000 C CNN
+F 2 "" H 3950 4050 50  0001 C CNN
+F 3 "~" H 3950 4050 50  0001 C CNN
+	1    3950 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J?
+U 1 1 5D7B96FA
+P 4150 4000
+F 0 "J?" H 4122 3932 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 4122 4023 50  0000 R CNN
+F 2 "" H 4150 4000 50  0001 C CNN
+F 3 "~" H 4150 4000 50  0001 C CNN
+	1    4150 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J?
+U 1 1 5D7BBFF9
+P 4150 4300
+F 0 "J?" H 4122 4232 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 4122 4323 50  0000 R CNN
+F 2 "" H 4150 4300 50  0001 C CNN
+F 3 "~" H 4150 4300 50  0001 C CNN
+	1    4150 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D7C31ED
+P 3950 4450
+F 0 "#PWR?" H 3950 4200 50  0001 C CNN
+F 1 "GND" H 3955 4277 50  0000 C CNN
+F 2 "" H 3950 4450 50  0001 C CNN
+F 3 "" H 3950 4450 50  0001 C CNN
+	1    3950 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D7C3581
+P 3300 4450
+F 0 "#PWR?" H 3300 4200 50  0001 C CNN
+F 1 "GND" H 3305 4277 50  0000 C CNN
+F 2 "" H 3300 4450 50  0001 C CNN
+F 3 "" H 3300 4450 50  0001 C CNN
+	1    3300 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D7C3962
+P 1700 4500
+F 0 "#PWR?" H 1700 4250 50  0001 C CNN
+F 1 "GND" H 1705 4327 50  0000 C CNN
+F 2 "" H 1700 4500 50  0001 C CNN
+F 3 "" H 1700 4500 50  0001 C CNN
+	1    1700 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 5D7C9B61
+P 4250 3850
+F 0 "#PWR?" H 4250 3700 50  0001 C CNN
+F 1 "+BATT" H 4265 4023 50  0000 C CNN
+F 2 "" H 4250 3850 50  0001 C CNN
+F 3 "" H 4250 3850 50  0001 C CNN
+	1    4250 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 5D7CBF45
+P 1200 3050
+F 0 "#PWR?" H 1200 2900 50  0001 C CNN
+F 1 "+BATT" H 1215 3223 50  0000 C CNN
+F 2 "" H 1200 3050 50  0001 C CNN
+F 3 "" H 1200 3050 50  0001 C CNN
+	1    1200 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 5D7CEAC7
+P 2700 1100
+F 0 "#PWR?" H 2700 950 50  0001 C CNN
+F 1 "+BATT" H 2715 1273 50  0000 C CNN
+F 2 "" H 2700 1100 50  0001 C CNN
+F 3 "" H 2700 1100 50  0001 C CNN
+	1    2700 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4000 3700 3850
+Wire Wire Line
+	3700 3850 3750 3850
+Wire Wire Line
+	4150 3850 4250 3850
+Wire Wire Line
+	3950 4000 3950 3900
+Wire Wire Line
+	3950 3900 4150 3900
+Wire Wire Line
+	4150 3900 4150 3850
+Connection ~ 4150 3850
+Wire Wire Line
+	3950 4450 3950 4300
+Wire Wire Line
+	3300 4450 3300 4400
+Wire Wire Line
+	1700 4500 1700 4450
+Wire Wire Line
+	1200 3100 1200 3050
+Wire Wire Line
+	2700 1150 2700 1100
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5D7E2F08
+P 2500 3250
+F 0 "J?" H 2557 3717 50  0000 C CNN
+F 1 "USB_B_Micro" H 2557 3626 50  0000 C CNN
+F 2 "" H 2650 3200 50  0001 C CNN
+F 3 "~" H 2650 3200 50  0001 C CNN
+	1    2500 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 3650 2500 3650
+Wire Wire Line
+	2800 3050 3300 3050
+$Comp
+L power:VCC #PWR?
+U 1 1 5D840F00
+P 3300 3050
+F 0 "#PWR?" H 3300 2900 50  0001 C CNN
+F 1 "VCC" H 3317 3223 50  0000 C CNN
+F 2 "" H 3300 3050 50  0001 C CNN
+F 3 "" H 3300 3050 50  0001 C CNN
+	1    3300 3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 3300 3050
+$Comp
+L Device:C 1µF
+U 1 1 5D7A2E24
+P 1700 4300
+F 0 "1µF" H 1815 4346 50  0000 L CNN
+F 1 "C" H 1815 4255 50  0000 L CNN
+F 2 "" H 1738 4150 50  0001 C CNN
+F 3 "~" H 1700 4300 50  0001 C CNN
+	1    1700 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D84A0B9
+P 2500 3650
+F 0 "#PWR?" H 2500 3400 50  0001 C CNN
+F 1 "GND" H 2505 3477 50  0000 C CNN
+F 2 "" H 2500 3650 50  0001 C CNN
+F 3 "" H 2500 3650 50  0001 C CNN
+	1    2500 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5D84C55D
+P 1700 4150
+F 0 "#PWR?" H 1700 4000 50  0001 C CNN
+F 1 "VCC" H 1717 4323 50  0000 C CNN
+F 2 "" H 1700 4150 50  0001 C CNN
+F 3 "" H 1700 4150 50  0001 C CNN
+	1    1700 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5D8537B0
+P 2500 4400
+F 0 "D?" H 2493 4616 50  0000 C CNN
+F 1 "LED" H 2493 4525 50  0000 C CNN
+F 2 "" H 2500 4400 50  0001 C CNN
+F 3 "~" H 2500 4400 50  0001 C CNN
+	1    2500 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R 330R
+U 1 1 5D853CEF
+P 2500 4800
+F 0 "330R" H 2570 4846 50  0000 L CNN
+F 1 "R" H 2570 4755 50  0000 L CNN
+F 2 "" V 2430 4800 50  0001 C CNN
+F 3 "~" H 2500 4800 50  0001 C CNN
+	1    2500 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5D860C3E
+P 2500 5050
+F 0 "#PWR?" H 2500 4900 50  0001 C CNN
+F 1 "VCC" H 2517 5223 50  0000 C CNN
+F 2 "" H 2500 5050 50  0001 C CNN
+F 3 "" H 2500 5050 50  0001 C CNN
+	1    2500 5050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2500 5050 2500 4950
+Wire Wire Line
+	2500 4650 2500 4550
+Wire Wire Line
+	2500 4250 2500 4000
+Wire Wire Line
+	2500 4000 2900 4000
+Wire Wire Line
+	3300 3050 3300 3700
+$Comp
+L Battery_Management:LTC4054ES5-4.2 U2
+U 1 1 5D762D0F
+P 3300 4000
+F 0 "U2" H 3744 3996 50  0000 L CNN
+F 1 "LTC4054ES5-4.2" H 3744 3905 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-5" H 3300 3500 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/405442xf.pdf" H 3300 3900 50  0001 C CNN
+	1    3300 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R 2k
+U 1 1 5D86C21E
+P 2900 4400
+F 0 "2k" H 2970 4446 50  0000 L CNN
+F 1 "R" H 2970 4355 50  0000 L CNN
+F 2 "" V 2830 4400 50  0001 C CNN
+F 3 "~" H 2900 4400 50  0001 C CNN
+	1    2900 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 4250 2900 4100
+Wire Wire Line
+	2900 4550 3150 4550
+Wire Wire Line
+	3150 4550 3150 4450
+Wire Wire Line
+	3150 4450 3300 4450
+Connection ~ 3300 4450
 $EndSCHEMATC
