@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:musicalPlasmaLighter-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -223,18 +224,13 @@ F 3 "" H 2700 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3700 4000 3700 3850
+	3700 4000 3700 3900
 Wire Wire Line
 	3700 3850 3750 3850
 Wire Wire Line
 	4150 3850 4250 3850
 Wire Wire Line
 	3950 4000 3950 3900
-Wire Wire Line
-	3950 3900 4150 3900
-Wire Wire Line
-	4150 3900 4150 3850
-Connection ~ 4150 3850
 Wire Wire Line
 	3950 4450 3950 4300
 Wire Wire Line
@@ -423,8 +419,87 @@ Wire Wire Line
 Connection ~ 4600 2000
 Wire Wire Line
 	4600 1800 4500 1800
-Text GLabel 3450 1450 2    50   Input ~ 0
+Text GLabel 3350 1200 1    50   Input ~ 0
 Vcarrier
-Text GLabel 3450 1650 2    50   Input ~ 0
+Text GLabel 3500 1200 1    50   Input ~ 0
 Vmod
+Text GLabel 6900 2000 2    50   Input ~ 0
+FET_A
+Text GLabel 6900 2550 2    50   Input ~ 0
+FET_B
+Wire Wire Line
+	3950 3900 3700 3900
+Connection ~ 3700 3900
+Wire Wire Line
+	3700 3900 3700 3850
+$Comp
+L Connector:Conn_01x01_Male J?
+U 1 1 5D766EE0
+P 3550 1950
+F 0 "J?" H 3522 1882 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 3522 1973 50  0000 R CNN
+F 2 "" H 3550 1950 50  0001 C CNN
+F 3 "~" H 3550 1950 50  0001 C CNN
+	1    3550 1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J?
+U 1 1 5D767EEF
+P 3600 1450
+F 0 "J?" H 3572 1382 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 3572 1473 50  0000 R CNN
+F 2 "" H 3600 1450 50  0001 C CNN
+F 3 "~" H 3600 1450 50  0001 C CNN
+	1    3600 1450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J?
+U 1 1 5D7685C5
+P 3600 1550
+F 0 "J?" H 3572 1482 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 3572 1573 50  0000 R CNN
+F 2 "" H 3600 1550 50  0001 C CNN
+F 3 "~" H 3600 1550 50  0001 C CNN
+	1    3600 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J?
+U 1 1 5D768DFD
+P 3600 1650
+F 0 "J?" H 3572 1582 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 3572 1673 50  0000 R CNN
+F 2 "" H 3600 1650 50  0001 C CNN
+F 3 "~" H 3600 1650 50  0001 C CNN
+	1    3600 1650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3300 1450 3300 1250
+Wire Wire Line
+	3300 1250 3350 1250
+Wire Wire Line
+	3350 1250 3350 1200
+Wire Wire Line
+	3300 1550 3300 1500
+Wire Wire Line
+	3300 1500 3350 1500
+Wire Wire Line
+	3350 1300 3500 1300
+Wire Wire Line
+	3500 1300 3500 1200
+Wire Wire Line
+	3350 1300 3350 1500
+Wire Wire Line
+	3300 1450 3400 1450
+Connection ~ 3300 1450
+Wire Wire Line
+	3300 1550 3400 1550
+Connection ~ 3300 1550
+Wire Wire Line
+	3300 1650 3400 1650
+Wire Wire Line
+	3350 1950 3300 1950
 $EndSCHEMATC
