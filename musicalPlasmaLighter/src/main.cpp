@@ -1,9 +1,11 @@
 #include <Arduino.h>
+// #include <pgmspace.h>
+#include <TimerOne.h>
 // By Luke Cyca
 // https://lukecyca.com
 // https://github.com/lukecyca/TetrisThemeArduino
 
-#define PIEZO_PIN  (13)
+#define PIEZO_PIN  (0)
 
 // A rest
 #define _R     (0)
@@ -122,7 +124,7 @@
 #define BPM   (120.0)
 
 
-float lead_notes[] = {
+const float lead_notes[] PROGMEM = {
   // part 1
   _E5, _B4, _C5, _D5, _C5, _B4, _A4, _A4, _C5, _E5, _D5, _C5, _B4, _B4, _C5, _D5, _E5, _C5, _A4, _A4, _R,
   _D5, _F5, _A5, _G5, _F5, _E5, _C5, _E5, _D5, _C5, _B4, _B4, _C5, _D5, _E5, _C5, _A4, _A4, _R,
@@ -132,7 +134,7 @@ float lead_notes[] = {
   _E4, _C4, _D4, _B3, _C4, _E4, _A4, _A4, _GS4, _R
 
 };
-float lead_times[] = {
+const float lead_times[] PROGMEM = {
   // part 1
   1.0, 0.5, 0.5, 1.0, 0.5, 0.5, 1.0, 0.5, 0.5, 1.0, 0.5, 0.5, 1.0, 0.5, 0.5, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0,
   1.5, 0.5, 1.0, 0.5, 0.5, 1.5, 0.5, 1.0, 0.5, 0.5, 1.0, 0.5, 0.5, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0,
@@ -143,7 +145,7 @@ float lead_times[] = {
 
 };
 
-float bass_notes[] = {
+const float bass_notes[] PROGMEM = {
   // part 1
   _E2, _E3, _E2, _E3, _E2, _E3, _E2, _E3, _A1, _A2, _A1, _A2, _A1, _A2, _A1, _A2, _GS1, _GS2, _GS1, _GS2, _GS1, _GS2, _GS1, _GS2, _A1, _A2, _A1, _A2, _A1, _B2, _C3, _E3,
   _D2, _D3, _D2, _D3, _D2, _D3, _D2, _D3, _C2, _C3, _C2, _C3, _C2, _C3, _C2, _C3, _B1, _B2, _B1, _B2, _B1, _B2, _B1, _B2, _A1, _A2, _A1, _A2, _A1, _A2, _A1, _A2,
@@ -154,7 +156,7 @@ float bass_notes[] = {
 
 
 };
-float bass_times[] = {
+const float bass_times[] PROGMEM = {
   // part 1
   0.5,  0.5,  0.5,  0.5,  0.5,  0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5,
   0.5,  0.5,  0.5,  0.5,  0.5,  0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5,
@@ -207,14 +209,14 @@ void setup() {
 void loop() {
   int curr_lead_note = 0;
   int curr_bass_note = 0;
-  float curr_lead_note_time_remaining = lead_times[curr_lead_note];
-  float curr_bass_note_time_remaining = bass_times[curr_bass_note];
+  float curr_lead_note_time_remaining = pgm_read_float(&lead_times[curr_lead_note]);
+  float curr_bass_note_time_remaining = pgm_read_float(&bass_times[curr_bass_note]);
   float lead_freq, bass_freq, note_value;
   unsigned long duration;
 
   while (curr_lead_note < lead_note_count && curr_bass_note < bass_note_count) {
-    lead_freq = lead_notes[curr_lead_note];
-    bass_freq = bass_notes[curr_bass_note];
+    lead_freq = pgm_read_float(&lead_notes[curr_lead_note]);
+    bass_freq = pgm_read_float(&bass_notes[curr_bass_note]);
     note_value = min(curr_lead_note_time_remaining, curr_bass_note_time_remaining);
     duration = note_value * 1000000 * (60.0/BPM);
 
@@ -232,14 +234,14 @@ void loop() {
     curr_lead_note_time_remaining -= note_value;
     if (curr_lead_note_time_remaining < 0.001) {
       curr_lead_note++;
-      curr_lead_note_time_remaining = lead_times[curr_lead_note];
+      curr_lead_note_time_remaining = pgm_read_float(&lead_times[curr_lead_note]);
     }
 
     // Advance bass note
     curr_bass_note_time_remaining -= note_value;
     if (curr_bass_note_time_remaining < 0.001) {
       curr_bass_note++;
-      curr_bass_note_time_remaining = bass_times[curr_bass_note];
+      curr_bass_note_time_remaining = pgm_read_float(&bass_times[curr_bass_note]);
     }
   }
 
