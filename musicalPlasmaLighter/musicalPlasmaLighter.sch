@@ -438,7 +438,7 @@ U 1 1 5D766EE0
 P 3550 1950
 F 0 "J2" H 3522 1882 50  0000 R CNN
 F 1 "Conn_01x01_Male" H 3522 1973 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 3550 1950 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 3550 1950 50  0001 C CNN
 F 3 "~" H 3550 1950 50  0001 C CNN
 	1    3550 1950
 	-1   0    0    1   
@@ -449,7 +449,7 @@ U 1 1 5D767EEF
 P 3600 1450
 F 0 "J3" H 3572 1382 50  0000 R CNN
 F 1 "Conn_01x01_Male" H 3572 1473 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 3600 1450 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 3600 1450 50  0001 C CNN
 F 3 "~" H 3600 1450 50  0001 C CNN
 	1    3600 1450
 	-1   0    0    1   
@@ -460,7 +460,7 @@ U 1 1 5D7685C5
 P 3600 1550
 F 0 "J4" H 3572 1482 50  0000 R CNN
 F 1 "Conn_01x01_Male" H 3572 1573 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 3600 1550 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 3600 1550 50  0001 C CNN
 F 3 "~" H 3600 1550 50  0001 C CNN
 	1    3600 1550
 	-1   0    0    1   
@@ -471,7 +471,7 @@ U 1 1 5D768DFD
 P 3600 1650
 F 0 "J5" H 3572 1582 50  0000 R CNN
 F 1 "Conn_01x01_Male" H 3572 1673 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 3600 1650 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 3600 1650 50  0001 C CNN
 F 3 "~" H 3600 1650 50  0001 C CNN
 	1    3600 1650
 	-1   0    0    1   
@@ -512,7 +512,7 @@ U 1 1 5D7AF285
 P 8350 2050
 F 0 "Q1" H 8556 2096 50  0000 L CNN
 F 1 "85N3LH5" H 8556 2005 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TO-263-2" H 8600 1975 50  0001 L CIN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 8600 1975 50  0001 L CIN
 F 3 "http://www.irf.com/product-info/datasheets/data/irlz44n.pdf" H 8350 2050 50  0001 L CNN
 	1    8350 2050
 	1    0    0    -1  
@@ -523,7 +523,7 @@ U 1 1 5D7B0D59
 P 8350 3000
 F 0 "Q2" H 8556 3046 50  0000 L CNN
 F 1 "85N3LH5" H 8556 2955 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TO-263-2" H 8600 2925 50  0001 L CIN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 8600 2925 50  0001 L CIN
 F 3 "http://www.irf.com/product-info/datasheets/data/irlz44n.pdf" H 8350 3000 50  0001 L CNN
 	1    8350 3000
 	1    0    0    -1  

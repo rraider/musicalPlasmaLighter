@@ -204,6 +204,9 @@ int bass_note_count = sizeof(bass_notes) / sizeof(float);
 
 void setup() {
   pinMode(PIEZO_PIN, OUTPUT);
+  pinMode(1, OUTPUT);
+  Timer1.initialize(63);
+  Timer1.pwm(1, 50);
 }
 
 void loop() {
